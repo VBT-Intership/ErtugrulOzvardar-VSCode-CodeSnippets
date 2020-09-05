@@ -1,0 +1,44 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+
+
+	"Reversed String": {
+		"scope": "java",
+		"prefix": "rev",
+		"body": [
+			"String str = $1;",
+			"String reversed = null;",
+			"int length = str.length();",
+			"for (int i = length-1; i >= 0; i--){reversed = reversed + str.charAt(i);}",
+			"return reversed;"
+			],
+			"description": "Reverse of a String"
+		},
+
+		"Insertion Sort": {
+			"scope": "java",
+			"prefix": "ins_Sort",
+			"body": [
+				"int[] array = new int[]{$1};",
+				"for (int i = 0; i < array.length - 1; i++){",
+					"int index = i;",
+					"for (int j = i + 1; j < array.length; j++){",
+						"if (array[j] < array[index]){",
+							"index = j;",
+						"}",
+					"}",
+					"int smallerNumber = array[index];",
+					"array[index] = array[i];",
+					"array[i] = smallerNumber;",
+				"}",
+				"return array;"
+				],
+				"description": "New array applying Insertion Sort Algorithm"
+			}
+
+}
